@@ -6,8 +6,108 @@
 
 :root {
   font-size: 62.5%;
+
+  --bg-color: #000000; 
+  --tx-color: #E1E1E6;
+  --tx-p_holder: #7C7C8A;
+  --bg-input: #06181C;
+
+  --bt-color: #065E7C;
+  --bt-hover: #FFFFFF;
+}
+
+body, button, input {
+  color: var(--tx-color);
+  font-family: 'Roboto';
 }
 
 body {
   font-size: 1.6rem;
+  background: var(--bg-color);
+  padding: 0 1.6rem;
+}
+
+.sr-only {
+  display: block;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background-color: aqua;
+  
+}
+
+.wrapper {
+
+  max-width: 112rem;
+  margin: 0 auto;
+  
+}
+
+header {
+  margin-top: 11.5rem;
+  margin-bottom: 8.7rem;
+  display: flex;
+  align-items: flex-end;
+  align-content: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.search {
+  display: flex;
+  align-content: center;
+  align-items: center ;
+  gap: .8rem;
+  
+}
+
+.search button {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: .8rem;
+  padding: 1.2rem 3.2rem;
+
+  background-color: var(--bt-color);
+
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+
+  transition: background .5s, color .5s;
+}
+
+.search button:hover {
+  background: var(--bt-hover);
+  color: var(--bt-color);
+}
+
+.search button svg > path {
+  transition: fill .5s;
+}
+
+.search button:hover  svg > path {
+  fill: var(--bt-color);
+}
+
+.search input[type="text"] {
+  background-color: var(--bg-input);
+  border: 0;
+  border-radius: 5px;
+  height: 5rem;
+  width: 46rem;
+  padding: 1.6rem;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.search input[type="text"]::placeholder {
+  color: var(--tx-p_holder);
 }
