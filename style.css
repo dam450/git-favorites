@@ -70,6 +70,7 @@ header {
   padding: 1.2rem 3.2rem;
 
   background-color: var(--bt-color);
+  cursor: pointer;
 
   text-transform: uppercase;
   border-radius: 5px;
@@ -100,7 +101,7 @@ header {
   border: 0;
   border-radius: 5px;
   height: 5rem;
-  width: 46rem;
+  width:  clamp(10rem, 45vw, 46rem);
   padding: 1.6rem;
 
   font-weight: 400;
@@ -110,4 +111,66 @@ header {
 
 .search input[type="text"]::placeholder {
   color: var(--tx-p_holder);
+}
+
+main {
+  border: 1px solid #4A808C;
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #092D38;
+  border-radius: 12px;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+th, td {
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #F75A68;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 160%;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.remove-btn:hover {
+  filter: brightness(0.9);
+  transform: translate(2px, -2px);
+  text-shadow: hsla(0, 15%, 26%, 0.911) -2px 2px 4px;
+}
+
+.fav-list tr:nth-child(even) {
+  background: rgba(6, 25, 29, 1);
+}
+
+.fav-list tr:nth-child(odd) {
+  background: rgba(6, 21, 25, 0.5);
+}
+
+.fav-head, .fav-list td {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 160%;
+  color: var(--tx-color);
 }
