@@ -51,6 +51,14 @@ class Store {
     this.values.push(value)
   }
 
+    
+  add(value) {
+    if(this.values)
+      this.values = [value, ...this.values]
+    else
+      this.values = [value]
+  }
+
   /**
    * limpa os valores da memória
    */
