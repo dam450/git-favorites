@@ -12,6 +12,7 @@
   --fg-scroll: #4a808c85;
   --fg-scroll-hover: #4a808cc7;
   --bg-scroll: #223c4283;
+  --table-border: #4a808c;
 }
 
 html {
@@ -87,7 +88,7 @@ body {
   
 }
 
-.wrapper {
+.app {
 
   /* max-width: 112rem; */
   width: min(95%, 112rem);
@@ -133,7 +134,7 @@ header {
   font-size: 14px;
   line-height: 24px;
 
-  transition: background .5s, color .5s;
+  transition: background .6s, color .3s;
 }
 
 .search button:hover {
@@ -237,10 +238,16 @@ td:last-child {
   gap: 1.6rem;
 }
 
-.user-info > img {
+.user-info img {
   height: 5.6rem;
   width: 5.6rem;
+  border: 2px solid transparent;
   border-radius: 50%;
+  transition: border 400ms;
+}
+
+.user-info img:hover {
+  border: 2px solid var(--tx-color);
 }
 
 .user-data {
@@ -283,7 +290,7 @@ td:last-child {
 }
 
 .fav-list tr:nth-child(n + 2)  {
-  border-top: 1px solid #4A808C;
+  border-top: 1px solid var(--table-border);
 }
 
 .fav-head, .fav-list td {
@@ -296,13 +303,13 @@ td:last-child {
 
 .fav-head {
   border-radius: 12px 12px 0 0;
-  border: 1px solid #4A808C;
+  border: 1px solid var(--table-border);
   border-bottom: 0;
 }
 
 .fav-list {
   border-radius: 0 0 12px 12px;
-  border: 1px solid #4A808C;
+  border: 1px solid var(--table-border);
   border-top: 0;
 }
 
