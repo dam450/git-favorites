@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   font-size: 62.5%;
 
@@ -14,7 +8,61 @@
 
   --bt-color: #065E7C;
   --bt-hover: #FFFFFF;
+
+  --fg-scroll: #4a808c85;
+  --fg-scroll-hover: #4a808cc7;
+  --bg-scroll: #223c4283;
 }
+
+html {
+  font-size: 1.6rem;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-scroll);
+  border-radius: 100vw;
+  margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--fg-scroll);
+  border-radius: 100vw;
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--fg-scroll-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--bg-color);
+}
+
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--fg-scroll) var(--bg-scroll);
+    scrollbar-gutter: stable;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 body, button, input {
   color: var(--tx-color);
@@ -22,9 +70,11 @@ body, button, input {
 }
 
 body {
-  font-size: 1.6rem;
   background: var(--bg-color);
-  padding: 0 1.6rem;
+  /* padding: 0 1.6rem; */
+  /* width: 100vw; */
+  display: grid;
+  
 }
 
 .sr-only {
@@ -39,11 +89,14 @@ body {
 
 .wrapper {
 
-  max-width: 112rem;
+  /* max-width: 112rem; */
+  width: min(95%, 112rem);
   margin: 0 auto;
+  /* padding: 0 3rem; */
   
 }
 
+/* ================ HEADER ================ */
 header {
   margin-top: 11.5rem;
   margin-bottom: 8.7rem;
@@ -113,34 +166,95 @@ header {
   color: var(--tx-p_holder);
 }
 
+
+/* ================  MAIN  ================ */
 main {
-  border: 1px solid #4A808C;
-  border-radius: 12px;
-  width: 100%;
-  overflow: hidden;
+  margin-bottom:  10rem;
 }
 
+/* ================  TABLE  ================ */
 table {
-  width: 100%;
+  /* width: 100%; */
+  table-layout: fixed;
   border-collapse: collapse;
+  
+  table-layout: fixed;
 }
+
+thead, tbody {
+  display: block; 
+  /* width: 100%; */
+}
+
 
 thead {
   background-color: #092D38;
-  /* border-radius: 12px; */
 }
 
-table th:first-child {
-  border-top-left-radius: 1.2rem;
+tbody {
+  max-height: 40rem;       
+  overflow-y: auto;  
+  overflow-x: hidden;  
 }
 
-table th:last-child {
-  border-top-right-radius: 1.2rem;
+tr {
+  width: 100%;
+}
+
+
+th {
+  padding: 1.6rem 4rem;
+}
+
+td {
+  padding: 2.4rem 4rem;
 }
 
 th, td {
-  padding: 1.6rem 4rem;
+  width: 210px;
   text-align: left;
+  overflow: hidden;
+}
+
+/* td:last-child {
+  min-width: 195px;
+} */
+
+th:first-child,
+td:first-child {
+  width: 500px;
+  text-align: left;
+}
+
+th:last-child,
+td:last-child {
+  width: 192px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.user-info > img {
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 2rem;
+  gap: 3px;
+  line-height: 2.5rem;
+}
+
+.user-data span {
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .remove-btn {
@@ -168,9 +282,66 @@ th, td {
   background: rgba(6, 21, 25, 0.5);
 }
 
+.fav-list tr:nth-child(n + 2)  {
+  border-top: 1px solid #4A808C;
+}
+
 .fav-head, .fav-list td {
   font-weight: 700;
   font-size: 2rem;
   line-height: 160%;
   color: var(--tx-color);
+}
+
+
+.fav-head {
+  border-radius: 12px 12px 0 0;
+  border: 1px solid #4A808C;
+  border-bottom: 0;
+}
+
+.fav-list {
+  border-radius: 0 0 12px 12px;
+  border: 1px solid #4A808C;
+  border-top: 0;
+}
+
+/* ================ EMPTY LIST ================ */
+
+tbody:has(.empty) {
+  overflow: hidden;  
+}
+
+.empty { 
+  display: block;
+  width: 100%;
+}
+
+.empty td {
+  height: 40rem;
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+.empty td div {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty td div > img{
+  width: 13rem;
+  height: 12rem;
+}
+
+.empty td span{
+  color: #4E5455;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 2.5rem;
 }

@@ -1,4 +1,4 @@
-
+/*
 import { GithubUser } from './GithubUserData.js'
 
 import { Store as LocalStorage} from './localStore.js'
@@ -51,3 +51,15 @@ userStorage.clearValues()
 userStorage.save()
 
 //new SimpleBar(document.querySelector('body'));
+*/
+
+import { Favorites } from './Favorites.js'
+
+const favorites = new Favorites()
+
+favorites.add('dam450')
+favorites.delete('Dam450')
+favorites.add('diego3g')
+favorites.add('MAYKbrito')
+favorites.add('MAYKbritodfdsfdfsadefds')
+

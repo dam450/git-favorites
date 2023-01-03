@@ -8,7 +8,7 @@
   <script src="./js/main.js" type="module"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>GitFav</title>
 </head>
 <body>
@@ -30,31 +30,95 @@
       <table>
         <thead class="fav-head">
           <tr>
-            <th>Usuário</th>
+            <th>
+              <div class="user-info">
+                Usuário
+              </div>
+            </th>
             <th>Repositórios</th>
             <th>Seguidores</th>
             <th>Ação</th>
           </tr>
         </thead>
         <tbody class="fav-list">
-          <tr>
-            <td>Usuário</td>
-            <td>123</td>
-            <td>1234 </td>
-            <td><button class="remove-btn" type="button">Remover</button></td>
+          <!-- <tr>
+            <td>
+              <div class="user-info">
+                <img src="https://github.com/maykbrito.png" alt="">
+                <div class="user-data">
+                  <strong>Mayk Brito</strong>
+                  <span>/maykbrito</span>
+                </div>
+              </div>
+            </td>
+            <td class="repos">123</td>
+            <td class="folowers">1234 </td>
+            <td class="action"><button class="remove-btn" type="button">Remover</button></td>
           </tr>
+
           <tr>
-            <td>Usuário</td>
-            <td>123</td>
-            <td>1234 </td>
-            <td><button class="remove-btn" type="button">Remover</button></td>
+            <td class="user-info">
+              <img src="https://github.com/diego3g.png" alt="">
+              <div class="user-data">
+                <strong>Diego Fernandes</strong>
+                <span>/diego3g</span>
+              </div>
+            </td>
+            <td class="repos">123</td>
+            <td class="folowers">1234 </td>
+            <td class="action"><button class="remove-btn" type="button">Remover</button></td>
           </tr>
+
           <tr>
-            <td>Usuário</td>
-            <td>123</td>
-            <td>1234 </td>
-            <td><button class="remove-btn" type="button">Remover</button></td>
+            <td class="user-info">
+              <img src="https://github.com/dam450.png" alt="">
+              <div class="user-data">
+                <strong>Evandro Damaso</strong>
+                <span>/dam450</span>
+              </div>
+            </td>
+            <td class="repos">123</td>
+            <td class="folowers">1234 </td>
+            <td class="action"><button class="remove-btn" type="button">Remover</button></td>
           </tr>
+
+          <tr>
+            <td class="user-info">
+              <img src="https://github.com/dam450.png" alt="">
+              <div class="user-data">
+                <strong>Evandro Damaso</strong>
+                <span>/dam450</span>
+              </div>
+            </td>
+            <td class="repos">123</td>
+            <td class="folowers">1234 </td>
+            <td class="action"><button class="remove-btn" type="button">Remover</button></td>
+          </tr>
+
+          <tr>
+            <td class="user-info">
+              <img src="https://github.com/dam450.png" alt="">
+              <div class="user-data">
+                <strong>Evandro Damaso</strong>
+                <span>/dam450</span>
+              </div>
+            </td>
+            <td class="repos">123</td>
+            <td class="folowers">1234 </td>
+            <td class="action"><button class="remove-btn" type="button">Remover</button></td>
+          </tr> -->
+
+
+          <!-- empty list start -->
+          <tr class="empty">
+            <td colspan="4">
+              <div class="empty">
+                <img src="./img/estrela.svg" alt="">
+                <span> Nenhum favorito ainda</span>
+              </div>
+            </td>
+          </tr>
+          <!-- empty list end -->
   
         </tbody>
         <tfoot></tfoot>
@@ -62,5 +126,17 @@
     </main>
 
   </div>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+  <script>
+      $('.fav-list').slimscroll({
+          height: '450px',
+          alwaysVisible: true,
+          color: '#4A808C',
+          opacity: '1'
+      })
+  </script> -->
+
 </body>
 </html>
