@@ -72,10 +72,7 @@ body, button, input {
 
 body {
   background: var(--bg-color);
-  /* padding: 0 1.6rem; */
-  /* width: 100vw; */
   display: grid;
-  
 }
 
 .sr-only {
@@ -85,16 +82,11 @@ body {
   height: 1px;
   overflow: hidden;
   background-color: aqua;
-  
 }
 
 .app {
-
-  /* max-width: 112rem; */
   width: min(95%, 112rem);
   margin: 0 auto;
-  /* padding: 0 3rem; */
-  
 }
 
 /* ================ HEADER ================ */
@@ -113,7 +105,6 @@ header {
   align-content: center;
   align-items: center ;
   gap: .8rem;
-  
 }
 
 .search button {
@@ -175,7 +166,6 @@ main {
 
 /* ================  TABLE  ================ */
 table {
-  /* width: 100%; */
   table-layout: fixed;
   border-collapse: collapse;
   
@@ -184,7 +174,6 @@ table {
 
 thead, tbody {
   display: block; 
-  /* width: 100%; */
 }
 
 
@@ -202,7 +191,6 @@ tr {
   width: 100%;
 }
 
-
 th {
   padding: 1.6rem 4rem;
 }
@@ -216,10 +204,6 @@ th, td {
   text-align: left;
   overflow: hidden;
 }
-
-/* td:last-child {
-  min-width: 195px;
-} */
 
 th:first-child,
 td:first-child {
@@ -300,7 +284,6 @@ td:last-child {
   color: var(--tx-color);
 }
 
-
 .fav-head {
   border-radius: 12px 12px 0 0;
   border: 1px solid var(--table-border);
@@ -350,5 +333,5 @@ tbody:has(.empty) {
   font-family: 'Roboto Mono';
   font-weight: 700;
   font-size: 4rem;
-  line-height: 2.5rem;
+  line-height: 4rem;
 }
