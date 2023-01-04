@@ -98,6 +98,13 @@ header {
   align-content: center;
   justify-content: space-between;
   gap: 1.6rem;
+
+  margin-inline: 2rem;
+
+}
+
+header > img {
+  height: 3.3rem;
 }
 
 .search {
@@ -122,8 +129,8 @@ header {
   border: 0;
 
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 
   transition: background .6s, color .3s;
 }
@@ -150,18 +157,20 @@ header {
   padding: 1.6rem;
 
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 100%;
 }
 
 .search input[type="text"]::placeholder {
   color: var(--tx-p_holder);
+
 }
 
 
 /* ================  MAIN  ================ */
 main {
   margin-bottom:  10rem;
+  margin-inline: 2rem;
 }
 
 /* ================  TABLE  ================ */
@@ -334,4 +343,58 @@ tbody:has(.empty) {
   font-weight: 700;
   font-size: 4rem;
   line-height: 4rem;
+}
+
+/* ================ media queries ============== */
+
+@media only screen and (max-width: 850px) {
+
+  :root {
+    font-size: 1.2vw;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  header img {
+    height: 4.2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) 
+  and (orientation: portrait) {
+  :root {
+    font-size: 1.3vw;
+  }
+
+  header button span {
+    display: none;
+  }
+
+  thead, tbody {
+    display: block; 
+  }
+
+  tbody {
+    max-height: initial;
+    overflow: auto;  
+  }
+
+  .search input[type="text"] {
+    height: 7.5rem;
+    width:  60vw;
+
+    margin-right: 2rem;
+
+    padding: 1.2rem 3.2rem;
+  
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+
 }
