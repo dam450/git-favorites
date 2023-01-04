@@ -74,6 +74,9 @@ export class FavoritesView extends Favorites {
 
   createRow({login, name, repos, followers}) {
     const tr = document.createElement('tr')
+    tr.classList.add('user')
+    tr.dataset.login = login
+
     tr.innerHTML = `
       <td>
         <div class="user-info">
