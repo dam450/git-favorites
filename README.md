@@ -47,7 +47,9 @@ Esse projeto foi desenvolvido com as seguintes linguagens e recursos:
 
 ## 💻 Projeto
 
-Neste projeto o desafio foi criar um app para salvar os perfis github favoritos do usuário.
+Neste projeto o desafio foi criar um app para salvar os perfis github favoritos do usuário. Os dados ficam salvos localmente fazendo uso do recurso ***LocalStorage***.
+
+Como melhoria, adicionei um filtro que ao digitar o nome do usuário mostra na lista os nomes que já estão na lista e que contém o texto informado.
 
 ## 🔖 Layout
 
