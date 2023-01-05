@@ -4,7 +4,7 @@
   <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@ O projeto está hospedado no Github Pages e pode ser acessado através do link [
 Esse projeto foi desenvolvido com as seguintes linguagens e recursos:
 
 <p align="left">
-  <a href="#">
+  <a href="#-tecnologias">
     <img src="https://skillicons.dev/icons?i=html,css,javascript&theme=dark" />
   </a>
 </p>
